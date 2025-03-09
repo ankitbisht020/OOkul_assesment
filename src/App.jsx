@@ -35,9 +35,7 @@ const KMLViewer = () => {
 
   const toggleSummary = () => {
     setSummary(
-      summary
-        ? null
-        : (() => {
+      summary ? null: (() => {
             if (!kmlData) return null;
             const summaryCounts = {};
             kmlData.features.forEach((feature) => {
@@ -51,9 +49,7 @@ const KMLViewer = () => {
 
   const toggleDetails = () => {
     setDetails(
-      details
-        ? null
-        : (() => {
+      details ? null(() => {
             if (!kmlData) return null;
             const detailsData = [];
             kmlData.features.forEach((feature) => {
